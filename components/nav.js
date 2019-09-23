@@ -2,38 +2,27 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 
-const Nav = () => (
-  <React.Fragment>
-    <Head>
-      <title>Blog Site</title>
-      <link
-        rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      />
-      <link rel="stylesheet" href="../static/css/clean-blog.min.css" />
-    </Head>
-    <nav
-      className="navbar navbar-expand-lg navbar-light fixed-top"
-      id="mainNav"
-    >
-      <div className="container">
-        <a className="navbar-brand" href="index.html">
-          My Blog
-        </a>
-        <button
-          className="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menu
-          <i className="fas fa-bars"></i>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarResponsive">
-          <ul className="navbar-nav ml-auto">
+const Nav = props => {
+  console.log(props);
+  const openMenu = () => {
+    console.log("opened");
+  };
+  return (
+    <React.Fragment>
+      <Head>
+        <title>Blog Site</title>
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="../static/css/clean-blog.min.css" />
+      </Head>
+      <nav className="navbar fixed-top" id="mainNav">
+        <div className="container flexbox-container">
+          <Link href="/">
+            <a className="navbar-brand">My Blog</a>
+          </Link>
+          <ul className="flexbox">
             <li className="nav-item">
               <Link href="/">
                 <a className="nav-link">Home</a>
@@ -46,23 +35,50 @@ const Nav = () => (
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
-    <header
-      className="masthead"
-      style={{ backgroundImage: "url('../static/post-bg.jpg')" }}
-    >
-      <div className="overlay"></div>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-8 col-md-10 mx-auto">
-            <div className="site-heading">
-              <h1>Awesome Blog</h1>
+      </nav>
+      <header
+        className="masthead"
+        style={{ backgroundImage: "url('../static/post-bg.jpg')" }}
+      >
+        <div className="overlay"></div>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 col-md-10 mx-auto">
+              <div className="site-heading">
+                <h1>Awesome Blog</h1>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-  </React.Fragment>
-);
+      </header>
+      <style jsx>{`
+        .flexbox {
+          align-items: center;
+          display: flex;
+          list-style: none;
+        }
+        .flexbox li a {
+          font-szie: 0.4em;
+          color: #fff;
+        }
+        .flexbox-container {
+          align-items: center
+          display: flex;
+        }
+        .flexbox-container ul{
+          font-size: 0.8em;
+          font-weight: bold;
+        }
+        #mainNav {
+          background: transparent;
+          border-bottom: none;
+        }
+        #mainNav a {
+          color: #fff;
+          border-bottom: none;
+        }
+      `}</style>
+    </React.Fragment>
+  );
+};
 export default Nav;
