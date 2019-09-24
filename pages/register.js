@@ -7,6 +7,17 @@ export default class home extends Component {
       <React.Fragment>
         <Head>
           <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+          <link rel="stylesheet" href="../static/css/clean-blog.min.css" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+            rel="stylesheet"
+            type="text/css"
+          />
         </Head>
         <Nav />
         <br></br>

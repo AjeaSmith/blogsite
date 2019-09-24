@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Articles from "../components/articles";
-import Nav from "../components/masthead";
+import Nav from "../components/nav";
 
 const Home = () => (
   <React.Fragment>

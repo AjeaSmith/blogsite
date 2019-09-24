@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Link from "next/link";
-export default class nav extends Component {
+class nav extends Component {
   render() {
     return (
       <React.Fragment>
@@ -41,17 +41,18 @@ export default class nav extends Component {
           display: flex;
         }
         .flexbox-container ul{
-          font-size: 0.8em;
+        //   font-size: 0.8em;
           font-weight: bold;
         }
         #mainNav {
           position: fixed;
           width: 100%;
-          background: #fff;
+          background: #0064C4;
           border-bottom: none;
         }
         #mainNav a {
-          color: #313639;
+            font-size: 0.8em;
+          color: #fff;
           border-bottom: none;
         }
       `}</style>
@@ -59,3 +60,4 @@ export default class nav extends Component {
     );
   }
 }
+export default nav;
