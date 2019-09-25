@@ -9,7 +9,7 @@ class articles extends Component {
             <div className="row">
               <div className="col-lg-8 col-md-10 mx-auto">
                 <div className="post-preview">
-                  <Link href="/register">
+                  <Link href={"/details"}>
                     <a href="#">
                       <h2 className="post-title">A post title</h2>
                       <h3 className="post-subtitle">

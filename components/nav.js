@@ -1,9 +1,20 @@
 import React, { Component } from "react";
 import Link from "next/link";
+import Head from "next/head";
 class nav extends Component {
   render() {
     return (
       <React.Fragment>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+          <link rel="stylesheet" href="../static/css/clean-blog.min.css" />
+          <link rel="stylesheet" href="../static/css/styles.css" />
+        </Head>
         <nav className="navbar fixed-top" id="mainNav">
           <div className="container flexbox-container">
             <Link href="/">
@@ -15,6 +26,7 @@ class nav extends Component {
                   <a className="nav-link">Home</a>
                 </Link>
               </li>
+              <span>|</span>
               <li className="nav-item">
                 <Link href="/register">
                   <a className="nav-link">Login / Register</a>
@@ -23,39 +35,6 @@ class nav extends Component {
             </ul>
           </div>
         </nav>
-        <style jsx>{`
-        ul{
-          margin-bottom: 0;
-        }
-        .flexbox {
-          align-items: center;
-          display: flex;
-          list-style: none;
-        }
-        .flexbox li a {
-          font-szie: 0.4em;
-          color: #fff;
-        }
-        .flexbox-container {
-          align-items: center
-          display: flex;
-        }
-        .flexbox-container ul{
-        //   font-size: 0.8em;
-          font-weight: bold;
-        }
-        #mainNav {
-          position: fixed;
-          width: 100%;
-          background: #0064C4;
-          border-bottom: none;
-        }
-        #mainNav a {
-            font-size: 0.8em;
-          color: #fff;
-          border-bottom: none;
-        }
-      `}</style>
       </React.Fragment>
     );
   }
