@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import Link from "next/link";
+import Head from "next/head";
 class articles extends Component {
   render() {
     return (
       <React.Fragment>
+        {/* <Head>
+          <link rel="stylesheet" href="../static/css/styles.css" />
+        </Head> */}
         <article>
           <div className="container">
             <div className="row">

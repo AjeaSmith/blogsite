@@ -9,10 +9,7 @@ const Home = () => (
       <title>Blog Site</title>
       <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
       <link rel="stylesheet" href="../static/css/clean-blog.min.css" />
-      <link
-        href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700?&display=swap"
-        rel="stylesheet"
-      />
+      <link rel="stylesheet" href="../static/css/styles.css" />
     </Head>
     <Nav />
     <header
